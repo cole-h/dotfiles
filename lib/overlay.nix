@@ -16,6 +16,7 @@ in
 
   # small-ish overrides
   rofi = prev.rofi.override { plugins = [ final.rofi-emoji ]; };
+  mpv-unwrapped = prev.mpv-unwrapped.override { cddaSupport = true; };
 
   # larger overrides
   # element-desktop = prev.element-desktop.overrideAttrs
