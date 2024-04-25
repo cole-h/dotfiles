@@ -64,7 +64,7 @@ in
     unitConfig.DefaultDependencies = "no";
     serviceConfig.Type = "oneshot";
     script = ''
-      zfs rollback apool/ROOT/local/tmp@blank && echo "Rollback complete!" || echo "Rollback failed!"
+      zfs rollback -r apool/ROOT/local/tmp@blank && echo "Rollback complete!" || echo "Rollback failed!"
     '';
   };
 
