@@ -40,7 +40,7 @@ let
   inherit (my) wallpaper;
 
   ## Workspaces
-  # output HDMI-A-1 (left)
+  # output DP-2 (left)
   ws1 = "1";
   ws2 = "2";
   ws3 = "3";
@@ -51,7 +51,7 @@ let
   ws8 = "8";
   ws9 = "9";
   ws10 = "10";
-  # output DP-1 (right)
+  # output DP-3 (right)
   wsF1 = "11";
   wsF2 = "12";
   wsF3 = "13";
@@ -98,12 +98,12 @@ in
     config = {
       output = {
         "*".bg = "${wallpaper} fit";
-        "HDMI-A-1" = {
+        "DP-2" = {
           resolution = "1920x1080";
           position = "0,180";
           scale = "1";
         };
-        "DP-1" = {
+        "DP-3" = {
           adaptive_sync = "on";
           resolution = "2560x1440@165Hz";
           position = "1920,0";
@@ -527,27 +527,27 @@ in
 
     extraConfig = ''
       ## Workspaces
-      workspace ${ws1}  output HDMI-A-1
-      workspace ${ws2}  output HDMI-A-1
-      workspace ${ws3}  output HDMI-A-1
-      workspace ${ws4}  output HDMI-A-1
-      workspace ${ws5}  output HDMI-A-1
-      workspace ${ws6}  output HDMI-A-1
-      workspace ${ws7}  output HDMI-A-1
-      workspace ${ws8}  output HDMI-A-1
-      workspace ${ws9}  output HDMI-A-1
-      workspace ${ws10} output HDMI-A-1
+      workspace ${ws1}  output DP-2
+      workspace ${ws2}  output DP-2
+      workspace ${ws3}  output DP-2
+      workspace ${ws4}  output DP-2
+      workspace ${ws5}  output DP-2
+      workspace ${ws6}  output DP-2
+      workspace ${ws7}  output DP-2
+      workspace ${ws8}  output DP-2
+      workspace ${ws9}  output DP-2
+      workspace ${ws10} output DP-2
 
-      workspace ${wsF1}  output DP-1
-      workspace ${wsF2}  output DP-1
-      workspace ${wsF3}  output DP-1
-      workspace ${wsF4}  output DP-1
-      workspace ${wsF5}  output DP-1
-      workspace ${wsF6}  output DP-1
-      workspace ${wsF7}  output DP-1
-      workspace ${wsF8}  output DP-1
-      workspace ${wsF9}  output DP-1
-      workspace ${wsF10} output DP-1
+      workspace ${wsF1}  output DP-3
+      workspace ${wsF2}  output DP-3
+      workspace ${wsF3}  output DP-3
+      workspace ${wsF4}  output DP-3
+      workspace ${wsF5}  output DP-3
+      workspace ${wsF6}  output DP-3
+      workspace ${wsF7}  output DP-3
+      workspace ${wsF8}  output DP-3
+      workspace ${wsF9}  output DP-3
+      workspace ${wsF10} output DP-3
 
       seat * hide_cursor 5000
       seat * keyboard_grouping none
