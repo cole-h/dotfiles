@@ -84,7 +84,4 @@ in
   boot.initrd.systemd.targets.zfs-import = {
     unitConfig.OnFailure = "poweroff-on-unlock-fail.service";
   };
-
-  # Don't wait for udev to finish processing events.
-  boot.initrd.systemd.services.systemd-udev-settle.serviceConfig.ExecStart = [ "" "/bin/true" ];
 }
