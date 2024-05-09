@@ -3,6 +3,7 @@
   xdg.configFile = {
     "git/ignore".text = ''
       .gdb_history
+      .jj
     '';
   };
 
