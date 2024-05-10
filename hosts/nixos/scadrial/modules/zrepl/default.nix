@@ -14,10 +14,6 @@
     };
   };
 
-  networking.extraHosts = ''
-    192.168.1.55 cultivation.local
-  '';
-
   # ZFS snapshotting for stuff I want backed up.
   services.zrepl = {
     enable = true;
@@ -73,7 +69,7 @@
 
           connect = {
             type = "tls";
-            address = "cultivation.local:8888";
+            address = "192.168.1.55:8888";
             ca = config.age.secrets.cultivation-crt.path;
             cert = config.age.secrets.scadrial-crt.path;
             key = config.age.secrets.scadrial-key.path;
