@@ -77,4 +77,6 @@
   services.nscd.enableNsncd = true;
 
   services.safeeyes.enable = true;
+
+  services.blueman.enable = true;
 }
