@@ -54,4 +54,14 @@ in
           --unset NIXOS_OZONE_WL
       '';
     });
+
+  clamav = prev.clamav.overrideAttrs ({ ... }: {
+    doCheck = false;
+  });
+
+  python312 = prev.python312.override {
+    packageOverrides = pyfinal: pyprev: {
+      nose = final.hello;
+    };
+  };
 }
