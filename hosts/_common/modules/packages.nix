@@ -14,7 +14,6 @@
       ncdu # friendlier du
       nix-index # nix-locate
       nixpkgs-fmt # the better formatter
-      nix-top # see what's building
       openssl # playing with tls and more
       par # nice paragraph formatter
       ripgrep # grep but better

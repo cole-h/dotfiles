@@ -12,8 +12,8 @@
       gcc # compilation, but also for rust
       gdb # debugging
       gitFull # ...git
-      gnome.file-roller # gui archive manager
-      gnome.nautilus # GUI file manager
+      file-roller # gui archive manager
+      nautilus # GUI file manager
       libressl.nc # netcat-openbsd
       man-pages # man-pages stuff
       man-pages-posix # posix man pages

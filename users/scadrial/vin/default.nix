@@ -13,7 +13,7 @@
 
   # Finally, a cursor theme that displays hands on clickable objects
   home.pointerCursor = {
-    package = pkgs.gnome.adwaita-icon-theme;
+    package = pkgs.adwaita-icon-theme;
     name = "Adwaita";
     size = 24;
   };
