@@ -357,16 +357,17 @@
     "wezterm": {
       "flake": false,
       "locked": {
-        "lastModified": 1719842966,
-        "narHash": "sha256-9sYfXoAvNHvelI4NEU7L+DV7hfBoOnJnLiRcmxNvjE4=",
+        "lastModified": 1719237287,
+        "narHash": "sha256-UZXraq6wADGMHyTZokswkHmQ7VqUXFy1C32HfrM/D8U=",
         "ref": "refs/heads/main",
-        "rev": "69686f4564ea460111936dee3179ecf8c80e9930",
-        "revCount": 8043,
+        "rev": "b6cc0382cb5af089c5a2039173cece194e861f46",
+        "revCount": 8041,
         "submodules": true,
         "type": "git",
         "url": "https://github.com/wez/wezterm.git"
       },
       "original": {
+        "rev": "b6cc0382cb5af089c5a2039173cece194e861f46",
         "submodules": true,
         "type": "git",
         "url": "https://github.com/wez/wezterm.git"
