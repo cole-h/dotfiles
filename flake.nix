@@ -27,10 +27,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix = {
-      url = "github:nixos/nix";
+      # url = "github:nixos/nix";
+      url = "github:edolstra/nix/lazy-trees";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
-    # nix = { url = "github:edolstra/nix/lazy-trees"; inputs.nixpkgs.follows = "nixpkgs"; };
     naersk = {
       url = "github:nix-community/naersk";
       inputs.nixpkgs.follows = "nixpkgs";

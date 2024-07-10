@@ -217,15 +217,16 @@
         "pre-commit-hooks": "pre-commit-hooks"
       },
       "locked": {
-        "lastModified": 1720539219,
-        "narHash": "sha256-fYZGuB/4LOBoMSUNj/yRU1mWm9lhdTzXF0P+zmac0hw=",
-        "owner": "nixos",
+        "lastModified": 1720449293,
+        "narHash": "sha256-KMAIegxAXRQqlPnQS1Z477RxGIH9Qtgiwq1aRwLDOPI=",
+        "owner": "edolstra",
         "repo": "nix",
-        "rev": "142e566adbce587a5ed97d1648a26352f0608ec5",
+        "rev": "0d3a1573304cc66abe423c505c2f751d3b020a66",
         "type": "github"
       },
       "original": {
-        "owner": "nixos",
+        "owner": "edolstra",
+        "ref": "lazy-trees",
         "repo": "nix",
         "type": "github"
       }
