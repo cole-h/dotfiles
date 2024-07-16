@@ -1,9 +1,6 @@
 { pkgs, lib, ... }:
 
 {
-  # Enable sound.
-  sound.enable = true;
-
   # Use pipewire for sound.
   services.pipewire = {
     enable = true;
@@ -13,7 +10,7 @@
   };
 
   # Enable OpenGL.
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   # Update microcode to address "Firmware Bug" messages on startup.
   hardware.cpu.intel.updateMicrocode = true;
