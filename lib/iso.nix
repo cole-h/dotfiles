@@ -12,7 +12,6 @@ let
           # (modulesPath + "/profiles/qemu-guest.nix")
         ];
 
-      nix.package = pkgs.nixUnstable;
       nix.settings.extra-experimental-features = [ "nix-command flakes" ];
 
       security.doas.enable = true;
