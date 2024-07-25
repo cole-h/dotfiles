@@ -27,8 +27,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix = {
-      # url = "github:nixos/nix";
-      url = "github:edolstra/nix/lazy-trees";
+      url = "github:nixos/nix/6e178cd899dc9e25e8da6a018f7cfdb233b762ea";
+      # url = "github:edolstra/nix/lazy-trees";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
     naersk = {
