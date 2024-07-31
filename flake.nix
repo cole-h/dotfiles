@@ -27,7 +27,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix = {
-      url = "github:nixos/nix/2.23.3";
+      url = "github:nixos/nix";
       # url = "github:edolstra/nix/lazy-trees";
       # inputs.nixpkgs.follows = "nixpkgs";
     };
