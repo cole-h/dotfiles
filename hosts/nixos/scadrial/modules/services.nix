@@ -26,12 +26,6 @@
   services.openssh.enable = true;
   services.openssh.settings.PasswordAuthentication = false;
 
-  # Enable CUPS to print documents.
-  services.printing = {
-    enable = true;
-    drivers = with pkgs; [ gutenprint ];
-  };
-
   # Necessary for discovering network printers.
   services.avahi = {
     enable = true;
