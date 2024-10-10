@@ -26,12 +26,6 @@
   services.openssh.enable = true;
   services.openssh.settings.PasswordAuthentication = false;
 
-  # Necessary for discovering network printers.
-  services.avahi = {
-    enable = true;
-    nssmdns4 = true;
-  };
-
   # services.udev.packages for packages with udev rules
   # SUBSYSTEMS=="usb", ATTRS{idVendor}=="04d8", ATTRS{idProduct}=="eed2", TAG+="uaccess", RUN{builtin}+="uaccess"
   services.udev.extraRules =
