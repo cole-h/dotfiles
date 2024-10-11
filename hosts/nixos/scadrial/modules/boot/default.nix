@@ -23,7 +23,9 @@
   boot.zfs.requestEncryptionCredentials = [ "apool/ROOT" ];
   boot.zfs.forceImportRoot = false;
 
-  boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+  # NOTE(cole-h): Do _not_ let this slide back to a version before 6.7/6.8 -- you will not get
+  # graphics with your 4090...
+  boot.kernelPackages = pkgs.linuxKernel.packages.linux_6_10;
   boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
   boot.extraModprobeConfig = ''
     options v4l2loopback exclusive_caps=1 video_nr=9 card_label="obs"
