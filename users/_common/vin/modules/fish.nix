@@ -13,6 +13,7 @@ in
         nix-locate = "command nix-locate --top-level $argv";
         which = "realpath (command which $argv)";
         ssh = "env TERM=xterm-256color ssh $argv";
+        sshno = "ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $argv";
         # std = "rustup doc --std";
         fish_greeting = "";
         fish_user_key_bindings = "bind \\cw backward-kill-word";
