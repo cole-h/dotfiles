@@ -62,7 +62,7 @@ let
               "nix"
               "nix/default.nix"
               "nix/linux-builder.nix"
-              # "nix/nixpkgs-flake.nix"
+              "nix/nixpkgs-flake.nix"
               "services/hercules-ci-agent"
               "services/nix-daemon.nix"
             ];
@@ -71,23 +71,20 @@ let
             options.nix.useDaemon = lib.mkOption {
               type = lib.types.bool;
               default = false;
-              description = ''
-                If set, Nix will use the daemon to perform operations.
-                Use this instead of services.nix-daemon.enable if you don't want the
-                daemon service to be managed for you.
-              '';
-            };
-
-            options.nix.channel.enable = lib.mkOption {
-              type = lib.types.bool;
-              default = false;
               internal = true;
               readOnly = true;
             };
 
-            config = {
-              nixpkgs.flake.source = lib.mkForce null;
-            };
+            # options.nix.channel.enable = lib.mkOption {
+            #   type = lib.types.bool;
+            #   default = false;
+            #   internal = true;
+            #   readOnly = true;
+            # };
+
+            # config = {
+            #   nixpkgs.flake.source = lib.mkForce null;
+            # };
           })
         ];
       };
