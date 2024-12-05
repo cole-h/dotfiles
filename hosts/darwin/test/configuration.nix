@@ -23,4 +23,6 @@
   # We use the auto-allocated-uids Nix feature, so there are no build users to
   # validate (Nix will create them as needed).
   # system.checks.verifyBuildUsers = false;
+
+  system.stateVersion = 5;
 }
