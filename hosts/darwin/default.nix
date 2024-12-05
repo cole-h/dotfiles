@@ -57,42 +57,42 @@ let
         inherit system;
 
         extraModules = [
-          {
-            disabledModules = [
-              "nix"
-              "nix/linux-builder.nix"
-              "nix/nixpkgs-flake.nix"
-              "services/hercules-ci-agent"
-              "services/nix-daemon.nix"
-            ];
-          }
-          ({ lib, ... }: {
-            options.nix.useDaemon = lib.mkOption {
-              type = lib.types.bool;
-              default = true;
-              internal = true;
-            };
+          # {
+          #   disabledModules = [
+          #     "nix"
+          #     "nix/linux-builder.nix"
+          #     "nix/nixpkgs-flake.nix"
+          #     "services/hercules-ci-agent"
+          #     "services/nix-daemon.nix"
+          #   ];
+          # }
+          # ({ lib, ... }: {
+          #   options.nix.useDaemon = lib.mkOption {
+          #     type = lib.types.bool;
+          #     default = true;
+          #     internal = true;
+          #   };
 
-            options.nix.package = lib.mkOption {
-              default = "/nix/var/nix/profiles/default";
-              internal = true;
-            };
+          #   options.nix.package = lib.mkOption {
+          #     default = "/nix/var/nix/profiles/default";
+          #     internal = true;
+          #   };
 
-            options.nix.configureBuildUsers = lib.mkOption {
-              type = lib.types.bool;
-              default = false;
-              internal = true;
-            };
+          #   options.nix.configureBuildUsers = lib.mkOption {
+          #     type = lib.types.bool;
+          #     default = false;
+          #     internal = true;
+          #   };
 
-            options.nixpkgs.flake = lib.mkOption {
-              internal = true;
-            };
+          #   options.nixpkgs.flake = lib.mkOption {
+          #     internal = true;
+          #   };
 
-            config.system.activationScripts.nix-daemon.text = "";
+          #   config.system.activationScripts.nix-daemon.text = "";
 
-            config.system.checks.verifyNixChannels = false;
-            config.system.checks.verifyBuildUsers = false;
-          })
+          #   config.system.checks.verifyNixChannels = false;
+          #   config.system.checks.verifyBuildUsers = false;
+          # })
         ];
       };
   };
