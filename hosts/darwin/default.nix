@@ -91,6 +91,7 @@ let
             config.system.activationScripts.nix-daemon.text = "";
 
             config.system.checks.verifyNixChannels = false;
+            config.system.checks.verifyBuildUsers = false;
           })
         ];
       };
