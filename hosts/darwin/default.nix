@@ -64,9 +64,9 @@ let
               "services/nix-daemon.nix"
             ];
           }
-          {
-            options.nix.useDaemon = mkOption {
-              type = types.bool;
+          ({ lib, ... }: {
+            options.nix.useDaemon = lib.mkOption {
+              type = lib.types.bool;
               default = false;
               description = ''
                 If set, Nix will use the daemon to perform operations.
@@ -74,7 +74,7 @@ let
                 daemon service to be managed for you.
               '';
             };
-          }
+          })
         ];
       };
   };
