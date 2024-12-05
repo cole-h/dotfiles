@@ -79,6 +79,10 @@ let
               internal = true;
             };
 
+            options.nix.buildMachines = lib.mkOption {
+              internal = true;
+            };
+
             options.nixpkgs.flake = lib.mkOption {
               internal = true;
             };
