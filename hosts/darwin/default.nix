@@ -82,19 +82,20 @@ let
               readOnly = true;
             };
 
-            options.nix.configureBuildUsers = lib.mkOption {
-              type = lib.types.bool;
-              default = false;
-              internal = true;
-              readOnly = true;
-            };
-
-            # options.nix.channel.enable = lib.mkOption {
+            # options.nix.configureBuildUsers = lib.mkOption {
             #   type = lib.types.bool;
             #   default = false;
             #   internal = true;
             #   readOnly = true;
             # };
+
+            # confirmed necessary
+            options.nix.channel.enable = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+              internal = true;
+              readOnly = true;
+            };
 
             # confirmed necessary
             options.nixpkgs.flake = lib.mkOption {
