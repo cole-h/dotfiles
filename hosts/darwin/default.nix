@@ -100,6 +100,7 @@ let
             };
 
             options.nix.settings = lib.mkOption {
+              default = {};
               internal = true;
               readOnly = true;
             };
