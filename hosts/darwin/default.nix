@@ -64,6 +64,7 @@ let
               "nix/nix-darwin.nix"
               "nix/nixpkgs.nix"
               "nix/nixpkgs-flake.nix"
+              "services/hercules-ci-agent"
             ];
           }
         ];
