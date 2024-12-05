@@ -61,6 +61,7 @@ let
             disabledModules = [
               "nix"
               "nix/default.nix"
+              "nix/linux-builder.nix"
               "services/hercules-ci-agent"
               "services/nix-daemon.nix"
             ];
