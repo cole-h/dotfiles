@@ -59,8 +59,7 @@ let
         extraModules = [
           {
             disabledModules = [
-              "nix"
-              # "nix/default.nix"
+              # "nix"
               "nix/linux-builder.nix"
               "nix/nixpkgs-flake.nix"
               "services/hercules-ci-agent"
