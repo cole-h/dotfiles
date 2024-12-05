@@ -98,7 +98,7 @@ let
               internal = true;
             };
 
-            config.system.activationScripts.nix-daemon.text = ":";
+            config.system.activationScripts.nix-daemon.text = "";
           })
         ];
       };
