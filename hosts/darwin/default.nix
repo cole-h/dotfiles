@@ -90,7 +90,7 @@ let
 
             config = {
               # nixpkgs.flake.source = lib.mkForce null;
-              activationScripts.nix-daemon.text = ":";
+              system.activationScripts.nix-daemon.text = ":";
             };
           })
         ];
