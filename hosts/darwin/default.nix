@@ -94,9 +94,10 @@ let
               internal = true;
             };
 
-            options.nixpkgs.flake = lib.mkOption {
-              internal = true;
-            };
+            # 
+            # options.nixpkgs.flake = lib.mkOption {
+            #   internal = true;
+            # };
 
             config.system.activationScripts.nix-daemon.text = "";
           })
