@@ -84,6 +84,10 @@ let
               internal = true;
               readOnly = true;
             };
+
+            config = {
+              nixpkgs.flake.source = null;
+            };
           })
         ];
       };
