@@ -99,6 +99,11 @@ let
               readOnly = true;
             };
 
+            options.nix.settings = lib.mkOption {
+              internal = true;
+              readOnly = true;
+            };
+
             options.nixpkgs.flake = lib.mkOption {
               internal = true;
               readOnly = true;
