@@ -68,12 +68,12 @@ let
             ];
           }
           ({ lib, ... }: {
-            options.nix.useDaemon = lib.mkOption {
-              type = lib.types.bool;
-              default = true;
-              internal = true;
-              readOnly = true;
-            };
+            # options.nix.useDaemon = lib.mkOption {
+            #   type = lib.types.bool;
+            #   default = true;
+            #   internal = true;
+            #   readOnly = true;
+            # };
 
             options.nix.package = lib.mkOption {
               type = lib.types.str;
@@ -106,7 +106,6 @@ let
 
             config = {
               system.activationScripts.nix-daemon.text = ":";
-              nix.configureBuildUsers = true;
             };
           })
         ];
