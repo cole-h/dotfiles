@@ -62,6 +62,7 @@ let
               "nix"
               "nix/linux-builder.nix"
               "nix/nixpkgs-flake.nix"
+              "services/hercules-ci-agent"
               "services/nix-daemon.nix"
             ];
           }
@@ -70,44 +71,32 @@ let
               type = lib.types.bool;
               default = true;
               internal = true;
-              readOnly = true;
             };
 
             options.nix.package = lib.mkOption {
               type = lib.types.str;
               default = "/nix/var/nix/profiles/default";
               internal = true;
-              readOnly = true;
             };
 
             options.nix.configureBuildUsers = lib.mkOption {
               type = lib.types.bool;
               default = false;
               internal = true;
-              readOnly = true;
             };
 
             options.nix.channel.enable = lib.mkOption {
               type = lib.types.bool;
               default = false;
               internal = true;
-              readOnly = true;
             };
 
             options.nix.extraOptions = lib.mkOption {
               internal = true;
-              readOnly = true;
-            };
-
-            options.nix.settings = lib.mkOption {
-              default = {};
-              internal = true;
-              # readOnly = true;
             };
 
             options.nixpkgs.flake = lib.mkOption {
               internal = true;
-              readOnly = true;
             };
 
             config.system.activationScripts.nix-daemon.text = ":";
