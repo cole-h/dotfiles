@@ -48,6 +48,26 @@ let
             nix
           ];
       };
+
+    test =
+      let
+        system = "aarch64-darwin";
+      in
+      {
+        inherit system;
+
+        extraModules = [
+          {
+            disabledModules = [
+              "nix"
+              "nix/linux-builder.nix"
+              "nix/nix-darwin.nix"
+              "nix/nixpkgs.nix"
+              "nix/nixpkgs-flake.nix"
+            ];
+          }
+        ];
+      };
   };
 
 in
