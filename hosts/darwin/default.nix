@@ -59,7 +59,7 @@ let
         extraModules = [
           {
             disabledModules = [
-              "nix"
+              "nix/default.nix"
               "nix/linux-builder.nix"
               "nix/nix-darwin.nix"
               # "nix/nixpkgs.nix"
