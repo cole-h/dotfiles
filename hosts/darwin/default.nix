@@ -84,13 +84,9 @@ let
               internal = true;
             };
 
-            options.nix.channel.enable = lib.mkOption {
-              type = lib.types.bool;
-              default = false;
-              internal = true;
-            };
-
-            # options.nix.extraOptions = lib.mkOption {
+            # options.nix.channel.enable = lib.mkOption {
+            #   type = lib.types.bool;
+            #   default = false;
             #   internal = true;
             # };
 
