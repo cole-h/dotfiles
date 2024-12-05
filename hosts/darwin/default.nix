@@ -65,6 +65,7 @@ let
               "nix/nixpkgs.nix"
               "nix/nixpkgs-flake.nix"
               "services/hercules-ci-agent"
+              "services/nix-daemon.nix"
             ];
           }
         ];
