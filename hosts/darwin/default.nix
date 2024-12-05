@@ -62,7 +62,6 @@ let
               "nix"
               "nix/linux-builder.nix"
               "nix/nixpkgs-flake.nix"
-              # "services/hercules-ci-agent"
               "services/nix-daemon.nix"
             ];
           }
@@ -91,6 +90,11 @@ let
             options.nix.channel.enable = lib.mkOption {
               type = lib.types.bool;
               default = false;
+              internal = true;
+              readOnly = true;
+            };
+
+            options.nix.extraOptions = lib.mkOption {
               internal = true;
               readOnly = true;
             };
