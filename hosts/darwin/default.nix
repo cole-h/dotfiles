@@ -62,7 +62,8 @@ let
               "nix"
               "nix/linux-builder.nix"
               "nix/nix-darwin.nix"
-              "nix/nixpkgs-flake.nix"
+              # "nix/nixpkgs.nix"
+              # "nix/nixpkgs-flake.nix"
               "services/hercules-ci-agent"
               "services/nix-daemon.nix"
             ];
