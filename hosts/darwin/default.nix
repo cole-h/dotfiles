@@ -81,7 +81,7 @@ let
             options.nix.channel.enable = lib.mkOption {
               type = lib.types.bool;
               default = false;
-              hidden = true;
+              internal = true;
               readOnly = true;
             };
           })
