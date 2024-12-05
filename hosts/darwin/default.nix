@@ -102,7 +102,7 @@ let
             options.nix.settings = lib.mkOption {
               default = {};
               internal = true;
-              readOnly = true;
+              # readOnly = true;
             };
 
             options.nixpkgs.flake = lib.mkOption {
