@@ -70,7 +70,7 @@ let
           ({ lib, ... }: {
             options.nix.useDaemon = lib.mkOption {
               type = lib.types.bool;
-              default = false;
+              default = true;
               internal = true;
               readOnly = true;
             };
