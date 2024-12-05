@@ -60,7 +60,7 @@ let
           {
             disabledModules = [
               "nix"
-              "nix/default.nix"
+              # "nix/default.nix"
               "nix/linux-builder.nix"
               "nix/nixpkgs-flake.nix"
               "services/hercules-ci-agent"
@@ -68,12 +68,12 @@ let
             ];
           }
           ({ lib, ... }: {
-            # options.nix.useDaemon = lib.mkOption {
-            #   type = lib.types.bool;
-            #   default = true;
-            #   internal = true;
-            #   readOnly = true;
-            # };
+            options.nix.useDaemon = lib.mkOption {
+              type = lib.types.bool;
+              default = true;
+              internal = true;
+              readOnly = true;
+            };
 
             options.nix.package = lib.mkOption {
               type = lib.types.str;
@@ -82,7 +82,6 @@ let
               readOnly = true;
             };
 
-            # confirmed necessary
             options.nix.configureBuildUsers = lib.mkOption {
               type = lib.types.bool;
               default = false;
@@ -90,7 +89,6 @@ let
               readOnly = true;
             };
 
-            # confirmed necessary
             options.nix.channel.enable = lib.mkOption {
               type = lib.types.bool;
               default = false;
@@ -98,15 +96,12 @@ let
               readOnly = true;
             };
 
-            # confirmed necessary
             options.nixpkgs.flake = lib.mkOption {
               internal = true;
               readOnly = true;
             };
 
-            config = {
-              system.activationScripts.nix-daemon.text = ":";
-            };
+            config.system.activationScripts.nix-daemon.text = ":";
           })
         ];
       };
