@@ -74,7 +74,6 @@ let
             };
 
             options.nix.package = lib.mkOption {
-              type = lib.types.str;
               default = "/nix/var/nix/profiles/default";
               internal = true;
             };
