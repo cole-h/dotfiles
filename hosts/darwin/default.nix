@@ -75,12 +75,11 @@ let
               readOnly = true;
             };
 
-            # options.nix.channel.enable = lib.mkOption {
-            #   type = lib.types.bool;
-            #   default = false;
-            #   internal = true;
-            #   readOnly = true;
-            # };
+            options.nixpkgs.flake = lib.mkOption {
+              # type = lib.types.bool;
+              internal = true;
+              readOnly = true;
+            };
 
             # config = {
             #   nixpkgs.flake.source = lib.mkForce null;
