@@ -62,7 +62,7 @@ let
               "nix"
               "nix/default.nix"
               "nix/linux-builder.nix"
-              "nix/nixpkgs-flake.nix"
+              # "nix/nixpkgs-flake.nix"
               "services/hercules-ci-agent"
               "services/nix-daemon.nix"
             ];
@@ -76,6 +76,13 @@ let
                 Use this instead of services.nix-daemon.enable if you don't want the
                 daemon service to be managed for you.
               '';
+            };
+
+            options.nix.channel.enable = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+              hidden = true;
+              readOnly = true;
             };
           })
         ];
