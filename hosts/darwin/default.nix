@@ -86,7 +86,7 @@ let
             };
 
             config = {
-              nixpkgs.flake.source = null;
+              nixpkgs.flake.source = lib.mkForce null;
             };
           })
         ];
