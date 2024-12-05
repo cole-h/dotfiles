@@ -82,12 +82,13 @@ let
               readOnly = true;
             };
 
-            # options.nix.configureBuildUsers = lib.mkOption {
-            #   type = lib.types.bool;
-            #   default = false;
-            #   internal = true;
-            #   readOnly = true;
-            # };
+            # confirmed necessary
+            options.nix.configureBuildUsers = lib.mkOption {
+              type = lib.types.bool;
+              default = false;
+              internal = true;
+              readOnly = true;
+            };
 
             # confirmed necessary
             options.nix.channel.enable = lib.mkOption {
@@ -104,8 +105,8 @@ let
             };
 
             config = {
-              # nixpkgs.flake.source = lib.mkForce null;
               system.activationScripts.nix-daemon.text = ":";
+              nix.configureBuildUsers = true;
             };
           })
         ];
