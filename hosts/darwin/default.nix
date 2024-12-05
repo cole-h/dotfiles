@@ -57,16 +57,17 @@ let
         inherit system;
 
         extraModules = [
-          {
+          ({ lib, ... }: {
             disabledModules = [
               "nix"
-              "nix/linux-builder.nix"
+
+              # 
+              # "nix/linux-builder.nix"
               "nix/nixpkgs-flake.nix"
               "services/hercules-ci-agent"
               "services/nix-daemon.nix"
             ];
-          }
-          ({ lib, ... }: {
+
             options.nix.useDaemon = lib.mkOption {
               type = lib.types.bool;
               default = true;
@@ -78,12 +79,6 @@ let
               internal = true;
             };
 
-            options.nix.configureBuildUsers = lib.mkOption {
-              type = lib.types.bool;
-              default = false;
-              internal = true;
-            };
-
             options.nixpkgs.flake = lib.mkOption {
               internal = true;
             };
@@ -91,6 +86,7 @@ let
             config.system.activationScripts.nix-daemon.text = "";
 
             config.system.checks.verifyNixChannels = false;
+
             config.system.checks.verifyBuildUsers = false;
           })
         ];
