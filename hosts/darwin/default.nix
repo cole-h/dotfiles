@@ -75,6 +75,13 @@ let
               readOnly = true;
             };
 
+            options.nix.package = mkOption {
+              type = types.str;
+              default = "/nix/var/nix/profiles/default";
+              internal = true;
+              readOnly = true;
+            };
+
             options.nixpkgs.flake = lib.mkOption {
               # type = lib.types.bool;
               internal = true;
