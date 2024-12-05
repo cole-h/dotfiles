@@ -84,17 +84,12 @@ let
               internal = true;
             };
 
-            # options.nix.channel.enable = lib.mkOption {
-            #   type = lib.types.bool;
-            #   default = false;
-            #   internal = true;
-            # };
-
             options.nixpkgs.flake = lib.mkOption {
               internal = true;
             };
 
             config.system.activationScripts.nix-daemon.text = "";
+            config.system.checks.verifyNixChannels = false;
           })
         ];
       };
