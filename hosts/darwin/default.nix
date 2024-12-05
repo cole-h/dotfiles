@@ -59,6 +59,7 @@ let
         extraModules = [
           {
             disabledModules = [
+              "nix"
               "nix/default.nix"
               "services/hercules-ci-agent"
               "services/nix-daemon.nix"
