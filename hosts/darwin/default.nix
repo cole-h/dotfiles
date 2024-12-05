@@ -88,6 +88,10 @@ let
             options.nix.settings = lib.mkOption {
               internal = true;
             };
+            options.nix.configureBuildUsers = lib.mkOption {
+              default = false;
+              internal = true;
+            };
 
             options.nixpkgs.flake = lib.mkOption {
               internal = true;
