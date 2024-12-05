@@ -85,6 +85,9 @@ let
             options.nix.distributedBuilds = lib.mkOption {
               internal = true;
             };
+            options.nix.settings = lib.mkOption {
+              internal = true;
+            };
 
             options.nixpkgs.flake = lib.mkOption {
               internal = true;
