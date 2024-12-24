@@ -16,7 +16,7 @@ rec {
   nixpkgsOverlays = [
     (import ./overlay.nix { inherit inputs; })
     (final: prev: {
-      agenix = inputs.agenix-cli.defaultPackage.${final.stdenv.system};
+      agenix = inputs.agenix-cli.packages.${final.stdenv.system}.default;
     })
   ];
 
